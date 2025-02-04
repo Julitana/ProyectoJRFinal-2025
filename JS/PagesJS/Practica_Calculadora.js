@@ -13,11 +13,17 @@ console.log(`Funcionando Archivo: Practica_Calculadora`);
 }
 
 function realizarSuma() {
-    console.log. ("Funcionado realizarSuma")
-    let numero1 = document.getElementById('numero1')value;
-    let numero2 = document.getElementById('numero2')value;
+    console.log("Funcionado realizarSuma")
+    let numero1 = document.getElementById('numero1').value
+    let numero2 = document.getElementById('numero2').value
 
-    console.log ("numero1")
-    console.log ("numero2")
+    let Suma = parseInt(numero1)  + parseInt(numero2) ;
+
+    document.getElementById('resultado').innerText = Suma;
+ 
+    console.log(numero1)
+    console.log(numero2)
+    console.log(Suma)
 }
+
 
