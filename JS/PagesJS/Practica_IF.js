@@ -63,3 +63,30 @@ console.log(`Funcionando Archivo: Practica_IF`);
     //parse int
     //parseFloat decimales
     //monto * 0.9
+
+    function calcularDescuento() {
+        let monto=  document.getElementById('monto').value;
+        let compra =  parseFloat ('monto')
+
+        if (monto >100) {
+
+        } else {
+            
+        }
+    }
+    
+    function verificarMayorMenor() {
+
+        let verificarEdad = parseInt(document.getElementById('verificarEdad').value);//gi
+       
+    
+            }
+
+
+       if (edad <=18){
+        
+         document.getElementById('mensajeedad').innerText = "Eres mayor de edad";
+        
+       } else {
+        document.getElementById('mensajeedad').innerText = "Eres menor de edad";
+       }
