@@ -86,3 +86,47 @@ function primeraPersonaActiva() {
   }
 
 }
+
+
+//Crear la funcion del onclick  
+// Input id value 
+//  mostrar el resultado inner 
+//caso 6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Crear la funcion del onclick  
+// Input id value 
+//  mostrar el resultado inner 
+//caso 6
+
+function personasActivas() {
+    let resultado = document.getElementById('listaActivos');
+
+    personas.forEach(element => {
+        
+        if (element.activo == true) {
+            
+          resultado.innerHTML += `
+          
+            <li>nombre : ${element.nombre} </li>`
+          
+            
+        }
+
+    });
+}
