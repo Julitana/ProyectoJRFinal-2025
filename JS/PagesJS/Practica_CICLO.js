@@ -34,11 +34,16 @@ if (element.activo == true) {
 
     console.log(element.nombre,element.activo)
 });
+//Buscar Persona por Nombre
+//Ingrese un nombre para buscar en la lista de personas.
 /// Contar la cantidad de elementoos de un array o lista
 console.log(personas.length);
 
 let buscarnombre= personas.find(x =>x.nombre ==="Ana" )
 console.log(buscarnombre)
+
+//Buscar Primera Persona Activa
+//Presione el botón para encontrar la primera persona activa en la lista.
 
 let buscaractivo = personas.find(x => x.activo=== "true")
 console.log(buscaractivo)
@@ -51,7 +56,7 @@ function Filtrar() {
 function buscarDesdeInput() {
     let input1 = document.getElementById('buscarNombre').value.trim();  //Metio el valor pepe
     let resultado = document.getElementById('resultadoBusqueda');
-  
+    
     //Busca en el arreglo 
     let busqueda = personas.find(x=> x.nombre.toUpperCase() === input1.toUpperCase()) //nombre == pepe
   
@@ -91,21 +96,35 @@ function primeraPersonaActiva() {
 
 
 function mostrarTodasLasPersonas() {
-  let resultado = document.getElementById('listaPersonas');
+  let nombreBuscado = document.getElementById('nombreInput').value; // Obtener el valor del input
+  let personas = personas.find(nombre => nombre === nombreBuscado); // Buscar el nombre exacto
 
-  personas.forEach(element => {
-      
-      if (element.nombre == nombre) {
-          
-        resultado.innerHTML += `
-        
-          <li>nombre : ${element.nombre} </li>` 
-        
-          
-      }
-
-  });
+  let contenedor = document.getElementById('mostrarTodasLasPersonas');
+  
+  if (personas) {
+      contenedor.innerHTML = `<p>${personas}</p>`; // Mostrar solo el nombre encontrado
+  } else {
+      contenedor.innerHTML = `<p>Nombre no encontrado</p>`; // Mensaje si no existe
+  }
 }
+
+
+function mostrarTodasLasPersonas() {
+  const resultado = document.getElementById('listaPersonas');
+  let contenido = ''; // Variable para almacenar el HTML
+
+  personas.forEach(persona => {
+    contenido += `
+      <li class="list-group-item">
+        <strong>Nombre:</strong> ${persona.nombre} <br>
+        <br>
+      </li>
+    `;
+  });
+
+  resultado.innerHTML = contenido; // Insertar todo el HTML de una vez
+}
+
 
 //Crear la funcion del onclick  
 // Input id value 
@@ -114,15 +133,20 @@ function mostrarTodasLasPersonas() {
 
 
 
-
-
-
-
-
-
-
-
-
+function personasActivas() {
+  let listaActivos = document.getElementById('listaActivos');
+  listaActivos.innerHTML = ''; 
+  personas.forEach(element => {
+      if (element.edad >= 18) { // Comprobar si la edad es mayor o igual a 18
+          listaActivos.innerHTML += `
+              <li class="list-group-item">
+                  <strong>Nombre:</strong> ${element.nombre}<br>
+                  <strong>Edad:</strong> ${element.edad}
+              </li>
+          `;
+      }
+  });
+}
 
 
 
