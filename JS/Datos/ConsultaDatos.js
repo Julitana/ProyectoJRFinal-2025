@@ -12,13 +12,13 @@ export let Datos_LiNav = [
         Nombre: "Inicio", //Nombre del usuario
         Detalle: "Proyecto", //si es practica o si es proyecto  
         Url: "Inicio.html",  //Ruta de la pagina
-        Activo: true       //es para visualizar u ocultar la pagina
+        Activo: true     //es para visualizar u ocultar la pagina
     },
     {   Id: 2,
         Nombre: "Calculadora",
         Detalle: "Practica",      
         Url: "/Practica_Calculadora.html",
-        Activo: true
+        Activo: false
     },
     {   Id: 3,
         Nombre: "Listado Clientes", 
@@ -30,7 +30,7 @@ export let Datos_LiNav = [
         Nombre: "Tarea Pokemon",   
         Detalle: "Practica",  
         Url: "/Practica_TareaPokemon.html",
-        Activo: true
+        Activo: false
     },
     {   Id: 5,
         Nombre: "Tarea Netflix",    
@@ -72,7 +72,7 @@ export let Datos_LiNav = [
         Nombre: "Practica CICLO",    
         Detalle: "Practica ", 
         Url: "/Practica_CICLO.html",
-        Activo: true
+        Activo: false
     },
 ];
 

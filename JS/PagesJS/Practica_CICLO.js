@@ -86,7 +86,26 @@ function primeraPersonaActiva() {
   }
 
 }
+//Mostrar Todas las Personas.Presione el botón para mostrar todas las personas registradas.
 
+
+
+function mostrarTodasLasPersonas() {
+  let resultado = document.getElementById('listaPersonas');
+
+  personas.forEach(element => {
+      
+      if (element.nombre == nombre) {
+          
+        resultado.innerHTML += `
+        
+          <li>nombre : ${element.nombre} </li>` 
+        
+          
+      }
+
+  });
+}
 
 //Crear la funcion del onclick  
 // Input id value 

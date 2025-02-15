@@ -11,31 +11,34 @@ console.log(`Funcionando Archivo: Practica_IF`);
         console.log(pais)
             }
 
+//si la condicion se cumple se va mostrar 
+//si no se cumple se muestra el else
+if (edad >= 18) {
 
-       if (edad >=18) {
-         alert (`Eres mayor de edad en`)
+    alert(`Eres mayor de edad en ${pais} `)
+} else {
+    
+    alert(`No eres mayor de edad en ${pais}`)
+}
+
+///caso 2
+function verificarParImpar() {
+
+    let numero3 = document.getElementById('numero3').value;
+
+    let numeroconvertido = parseInt(numero3)
+
+    if (numeroconvertido % 2 === 0) {
         
-       } else {
-         alert (`No eres mayor de edad  `)
-       }
-
-       function verificarParImpar() {
-
-        let numero3 = document.getElementById('numero3').value;
-    
-        let numeroconvertido = parseInt(numero3)
-    
-        if (numeroconvertido % 2 === 0) {
-            
-           document.getElementById('mensajeParImpar').innerText = `El numero ${numeroconvertido} es par`;
-        } else {
-            document.getElementById('mensajeParImpar').innerText = `El numero ${numeroconvertido} es Impar`;
-        }
-    
-        console.log(numeroconvertido)
+       document.getElementById('mensajeParImpar').innerText = `El numero ${numeroconvertido} es par`;
+    } else {
+        document.getElementById('mensajeParImpar').innerText = `El numero ${numeroconvertido} es Impar`;
     }
+
+    console.log(numeroconvertido)
+}
     
-    
+//caso 3 
     function evaluarNota() {
         
         let nota = document.getElementById('nota').value;
@@ -63,30 +66,50 @@ console.log(`Funcionando Archivo: Practica_IF`);
     //parse int
     //parseFloat decimales
     //monto * 0.9
+      //caso 4
+      //Cálculo de Descuento
+      //Si tu compra supera los $100, recibirás un descuento del 10%.
+         
+      function calcularDescuento() {
+        let compra = document.getElementById('monto').value;
+         let descuento= 0.10
+         let resultado = parseFloat (compra) - parseFloat (descuento)
+      }
+      
+      if (compra >100) {
+        document.getElementById('resultado').innerHTML= `Si la ${compra} es mayor 100 tiene un descuesto`;
+        
+      } else {
+        document.getElementById('resultado').innerHTML= `Si la ${compra} no es mayor 100 no tiene un descuesto`;
+      }
 
-    function calcularDescuento() {
-        let monto=  document.getElementById('monto').value;
-        let compra =  parseFloat ('monto')
-
-        if (monto >100) {
-
+      function calcularDescuento() {
+        let compra = document.getElementById('monto').value;
+        let descuento = 0.10;
+        let resultado= parseFloat(compra) * parseFloat( descuento);
+      
+        if (parseFloat(compra) > 100) { 
+          document.getElementById('resultado').innerHTML = `El precio final con descuento es: $${resultado}`; // Mostrar resultado sin redondear
         } else {
-            
+          
+          document.getElementById('resultado').innerHTML = `No tienes descuento. El precio final es: $${resultado}`; // Mostrar resultado sin redondear
         }
-    }
-    
-    function verificarMayorMenor() {
+      }
 
-        let verificarEdad = parseInt(document.getElementById('verificarEdad').value);//gi
+     
+      
        
+    /// caso 5
+    function verificarMayorMenor() {
+        let mayor = parseFloat(document.getElementById('mayor').value);
+        let menor = parseFloat(document.getElementById('menor').value);
     
-            }
-
-
-       if (edad <=18){
-        
-         document.getElementById('mensajeedad').innerText = "Eres mayor de edad";
-        
-       } else {
-        document.getElementById('mensajeedad').innerText = "Eres menor de edad";
-       }
+        console.log("Mayor ingresado:", mayor);
+        console.log("Menor ingresado:", menor);
+    
+        if (mayor > menor) {
+            document.getElementById('mensajeEdadSimple').innerText = `El resultado es mayor`;
+        } else if (mayor < menor) {
+            document.getElementById('mensajeEdadSimple').innerText = `El resultado es menor`;
+        } 
+    } 
