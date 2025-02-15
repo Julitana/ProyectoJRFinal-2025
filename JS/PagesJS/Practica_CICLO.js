@@ -159,17 +159,67 @@ function personasActivas() {
 
 function personasActivas() {
     let resultado = document.getElementById('listaActivos');
-
+    //Es el array de personas
     personas.forEach(element => {
         
-        if (element.activo == true) {
-            
-          resultado.innerHTML += `
+        if (element.activo == true) { // Verificamos si la propiedad 'activo' de cada persona es verdadera
+
+
+        // Si es activo, agregamos un nuevo item a la lista con su nombre
+        resultado.innerHTML += `
           
-            <li>nombre : ${element.nombre} </li>`
+            <li>nombre : ${element.nombre} </li>` 
           
             
         }
 
     });
 }
+
+function personasActivas(){
+  let resultado = document.getElementById('listaActivos');
+
+ personas.forEach(element => {
+ if (element.activo == true) {
+
+   resultado.innerHTML`
+    
+    <li>nombre: ${element.nombre}`
+    } 
+    
+  });
+}
+
+// function personasActivas() {
+//   let resultado= document.getElementById('listaActivos');
+//   personas.forEach(element => {
+//     if(element.activo ==true)
+//     resultado.innerHTML`
+//   <li>nombre:${element.nombre}`
+  
+//  });
+  
+// }
+
+
+// function personasActivas() {
+//   let resultado= document.getElementById('listaActivos');
+//   personas.forEach(element => {
+//     if(element.activo ==true)
+//     resultado.innerHTML`
+//   <li>nombre:${element.nombre}`
+  
+//  });
+  
+// }
+
+// function personasActivas() {
+//   let resultado= document.getElementById('listaActivos');
+//   personas.forEach(element => {
+//     if(element.activo ==true)
+//     resultado.innerHTML`
+//   <li>nombre:${element.nombre}`
+  
+//  });
+  
+// }
