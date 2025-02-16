@@ -1,9 +1,11 @@
 console.log('Funcionando Archivo: API_Listado_Clientes');
 const Api_Usuarios = "https://jsonplaceholder.typicode.com/users"
+const Api2 = "https://rickandmortyapi.com/api/character"
 // Datos locales simulando la API
 
 
 let DatosFiltrados=[]
+let DatosFilrados2 = []
 let contenedor = document.getElementById('tbody'); /// Se escribio fuera de la funcion para retutilizarlo 
 
 
@@ -11,6 +13,7 @@ let contenedor = document.getElementById('tbody'); /// Se escribio fuera de la f
 document.addEventListener('DOMContentLoaded', () => {
      
      consultarDatos() 
+     consultarDatos2()
      consultarApiclientes()
     
 
@@ -34,6 +37,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     
  }
+
+ function consultarDatos2() {
+    /// fetchget 
+    fetch(Api2) // nombre de la Api
+     
+        .then(response => response.json())
+        .then(result => {
+            // custom error // agregamos un console.logo con la palabra result para ver si esta teniendo resultado 
+            console.log(result.result)
+           
+        })
+        .catch(error => {
+            // common error
+            return null;
+        });
+    
+ }
+
 
  function Mostrar_CampoTABLA() {
 
