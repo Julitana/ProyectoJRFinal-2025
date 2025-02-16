@@ -14,8 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
      consultarDatos() 
 
  });
-/// fetchget 
+
+  /// consultar datos del Api mediante Fetch (AJAX)
  function consultarDatos() {
+    /// fetchget 
     fetch(Api_Usuarios) // nombre de la Api
      
         .then(response => response.json())
@@ -29,5 +31,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     
  }
- 
+
+document.addEventListener('DOMContentLoaded', () => {
+    consultarApiclientes()
+    
+});
+
+function consultarApiclientes() {
+    fetch(Api_Usuarios)
+
+        .then(response => response.json())
+        .then(result => {
+            // custom error
+            console.log(result)
+        })
+        .catch(error => {
+            // common error
+            return null;
+        });
+
+    
+}
+
 
