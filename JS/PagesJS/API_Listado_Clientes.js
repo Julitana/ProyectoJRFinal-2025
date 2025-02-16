@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(result => {
             // custom error // agregamos un console.logo con la palabra result para ver si esta teniendo resultado 
-            console.log(result.result)
+            console.log(result.results)
            
         })
         .catch(error => {
