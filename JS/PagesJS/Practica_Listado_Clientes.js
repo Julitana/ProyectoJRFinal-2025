@@ -10,16 +10,24 @@ let Datos_Locales = [
     { id: 4, name: "Ana Fernández", email: "ana.fernandez@example.com" }
 ];
 
-
+let DatosFiltrados=[]
 let contenedor = document.getElementById('tbody'); /// Se escribio fuera de la funcion para retutilizarlo 
 
-Mostrar_CampoTABLA() 
+DatosFiltrados = Datos_Locales
+
+///aela ejecutador de eventos 
+document.addEventListener('DOMContentLoaded', () => {
+     
+     Mostrar_CampoTABLA() 
+
+ });
+
 
 function Mostrar_CampoTABLA() {
 
     let html = ""
     
-    Datos_Locales.forEach(element => {
+    DatosFiltrados.forEach(element => {
         console.log(element)
         html +=`
           <tr>
