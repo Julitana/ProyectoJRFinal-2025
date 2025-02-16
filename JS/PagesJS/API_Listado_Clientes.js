@@ -1,12 +1,11 @@
 console.log('Funcionando Archivo: API_Listado_Clientes');
 const Api_Usuarios = "https://jsonplaceholder.typicode.com/users"
 // Datos locales simulando la API
-let Datos_Locales = [];
+
 
 let DatosFiltrados=[]
 let contenedor = document.getElementById('tbody'); /// Se escribio fuera de la funcion para retutilizarlo 
 
-DatosFiltrados = Datos_Locales
 
 ///aela ejecutador de eventos 
 document.addEventListener('DOMContentLoaded', () => {
@@ -24,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(result => {
             // custom error // agregamos un console.logo con la palabra result para ver si esta teniendo resultado 
             console.log(result)
+            DatosFiltrados=result
         })
         .catch(error => {
             // common error
@@ -38,15 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function consultarApiclientes() {
-    fetch(Api_Usuarios)
+    fetch(Api_Usuarios) /// 1-Se le indica la url de la Api
 
-        .then(response => response.json())
-        .then(result => {
+        .then(response => response.json()) /// 2- converison de datos , JSON 
+        .then(result => {    /// 3- resultado 
             // custom error
             console.log(result)
         })
-        .catch(error => {
+        .catch(error => { /// en caso de error 
             // common error
+            alert("Error", error)
             return null;
         });
 
