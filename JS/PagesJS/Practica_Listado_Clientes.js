@@ -1,5 +1,6 @@
 console.log(`Funcionando Archivo:  Practica_Listado_Clientes`);
-console.log('Funcionando Archivo: API_Listado_Clientes');
+
+
 
 // Datos locales simulando la API
 let Datos_Locales = [
@@ -12,8 +13,23 @@ let Datos_Locales = [
 
 let contenedor = document.getElementById('tbody'); /// Se escribio fuera de la funcion para retutilizarlo 
 
+Mostrar_CampoTABLA() 
+
 function Mostrar_CampoTABLA() {
+
     let html = ""
+    
+    Datos_Locales.forEach(element => {
+        console.log(element)
+        html +=`
+          <tr>
+            <td>${element.id} </td>
+            <td>${element.name}  </td>
+            <td>${element.email} </td>
+         </tr>
+        `
+    });
+    contenedor.innerHTML= html
     
 }
 
