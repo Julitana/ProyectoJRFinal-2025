@@ -48,7 +48,7 @@ export let Datos_LiNav = [
         Nombre: "API_Listado_Cliente",    
         Detalle: "Proyecto", 
         Url: "/API_Listado_Clientes.html",
-        Activo: false
+        Activo: true
     },
     {   Id: 9,
         Nombre: "API_VerUsuario",    
