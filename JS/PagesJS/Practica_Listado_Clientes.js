@@ -1,4 +1,22 @@
 console.log(`Funcionando Archivo:  Practica_Listado_Clientes`);
+console.log('Funcionando Archivo: API_Listado_Clientes');
+
+// Datos locales simulando la API
+let Datos_Locales = [
+    { id: 1, name: "Juan Pérez", email: "juan.perez@example.com" },
+    { id: 2, name: "María Gómez", email: "maria.gomez@example.com" },
+    { id: 3, name: "Carlos Rodríguez", email: "carlos.rodriguez@example.com" },
+    { id: 4, name: "Ana Fernández", email: "ana.fernandez@example.com" }
+];
+
+
+let contenedor = document.getElementById('tbody'); /// Se escribio fuera de la funcion para retutilizarlo 
+
+function Mostrar_CampoTABLA() {
+    let html = ""
+    
+}
+
 
 
 function exportToExcel() {

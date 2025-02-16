@@ -1,6 +1,6 @@
 
 :root{
-  --fondogradiante:linear-gradient(to bottom, #dd2476, #ff512f);  
+  --fondogradiante:linear-gradient(to bottom, #03406fd4, #1c8f9c);  
   --colorglobal:#dd2476;
   --TextClaro: white;
 
@@ -8,7 +8,9 @@
 
 body{
     font-family: "Titillium Web", sans-serif;
+    background-color: #13b4c32d;
 }
+
 
 main{
 
