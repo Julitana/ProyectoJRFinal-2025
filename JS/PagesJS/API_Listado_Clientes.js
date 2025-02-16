@@ -11,6 +11,8 @@ let contenedor = document.getElementById('tbody'); /// Se escribio fuera de la f
 document.addEventListener('DOMContentLoaded', () => {
      
      consultarDatos() 
+     consultarApiclientes()
+    
 
  });
 
@@ -24,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // custom error // agregamos un console.logo con la palabra result para ver si esta teniendo resultado 
             console.log(result)
             DatosFiltrados=result
+            Mostrar_CampoTABLA()
         })
         .catch(error => {
             // common error
@@ -32,10 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
     
  }
 
-document.addEventListener('DOMContentLoaded', () => {
-    consultarApiclientes()
+ function Mostrar_CampoTABLA() {
+
+    let html = ""
     
-});
+    DatosFiltrados.forEach(element => {
+        console.log(element)
+        html +=`
+          <tr>
+            <td>${element.id} </td>
+            <td>${element.name}  </td>
+            <td>${element.email} </td>
+         </tr>
+        `
+    });
+    contenedor.innerHTML= html
+    
+}
+
 
 function consultarApiclientes() {
     fetch(Api_Usuarios) /// 1-Se le indica la url de la Api
