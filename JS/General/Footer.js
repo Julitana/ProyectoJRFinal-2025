@@ -19,9 +19,25 @@ function Mostrar_Footer() {
 
                 <div class="col-md-5 col-sm-6">
                     <!-- Fin: Contenedor 1 -->
-                    <p class="text-muted"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quos
-                        dolorum possimus facere laborum! Sapiente ad veritatis, laudantium itaque distinctio
-                        necessitatibus vel molestias, omnis incidunt dolore in impedit sint totam?</p>
+                  <div class="enlaces-pie">
+        <div class="enlaces-pie__contenedor">
+          
+          <ul class="enlaces-pie__lista">
+            <h3>Servicios en linea</h3>
+            <li><a href="#"> Matricula </a></li>
+            <li><a href="#">Aula Vitual</a></li>
+            <li><a href="#">Biblioteca</a></li>
+          </ul>
+          
+          <ul class="enlaces-pie__lista">
+            <h3>Admision y Becas</h3>
+            <li><a href="/inscibete_hoy.html">Admision</a></li>
+            <li><a href="/inscibete_hoy.html">Departamento de Registro </a></li>
+            <li><a href="#">Becas Estudiantiles </a></li>
+          </ul>
+        </div>
+      </div>
+    
                 </div>
                 <!-- Fin: footer-mensaje -->
 
@@ -33,7 +49,7 @@ function Mostrar_Footer() {
 
                 </div>
                 <!-- Inicio: Contenedor 3 2 columnas  -->
-                <div class="col-md-2 col-sm-6 iconos">
+                <div class=" col-md-2 col-sm-6 iconos ">
                     <i class="fab fa-facebook-f"></i>
                     <i class="fab fa-instagram"></i>
                     <i class="fab fa-twitter"></i>
@@ -44,11 +60,12 @@ function Mostrar_Footer() {
             </div>
             <!-- Inicio: Contenedor 1 12 columnas  -->
             <div class="col-md-12 ">
-                <p class="text-muted"> Copyright @2024 VLA| Front L-M</p>
+                <p class="text-muted">  <br>
+                Derechos de Autor ABAN Language Academy</p>
             </div>
             <!-- Fin: footer-mensaje -->
-
-        </div>
+ 
+    
 `;
     
 }

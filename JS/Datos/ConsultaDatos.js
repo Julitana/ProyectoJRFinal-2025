@@ -48,7 +48,7 @@ export let Datos_LiNav = [
         Nombre: "API_Listado_Cliente",    
         Detalle: "Proyecto", 
         Url: "/API_Listado_Clientes.html",
-        Activo: true
+        Activo: false
     },
     {   Id: 9,
         Nombre: "API_VerUsuario",    
@@ -60,7 +60,7 @@ export let Datos_LiNav = [
         Nombre: "API_Contacto",    
         Detalle: "Proyecto", 
         Url: "/API_Contacto.html",
-        Activo: false
+        Activo: true
     },
     {   Id: 11,
         Nombre: "Practica IF",    

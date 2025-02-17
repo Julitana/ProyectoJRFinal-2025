@@ -9,18 +9,21 @@ document.addEventListener('DOMContentLoaded', (e) => {
     Mostrar_LiNav()
 });
 
+
+
+
 function Mostrar_Navbar() {
 
 let Contenedo_IdNav = document.getElementById('IdNav');  //ls //gi
 
 Contenedo_IdNav.innerHTML = 
 `
- <a class="navbar-brand" href="#">App Store </a>
+ <a class="navbar-brand" href="#" >    <img src="Assets/LOGO ABAN.png" alt="Logo" style="width: 100px; height: auto;"> </a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
             aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <div class="collapse navbar-collapse" id="collapsibleNavId" w-100 h-100 >
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="IdLiNav">
             
 

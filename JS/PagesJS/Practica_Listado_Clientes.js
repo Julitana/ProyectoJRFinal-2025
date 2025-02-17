@@ -4,10 +4,10 @@ console.log(`Funcionando Archivo:  Practica_Listado_Clientes`);
 
 // Datos locales simulando la API
 let Datos_Locales = [
-    { id: 1, name: "Juan Pérez", email: "juan.perez@example.com" },
-    { id: 2, name: "María Gómez", email: "maria.gomez@example.com" },
-    { id: 3, name: "Carlos Rodríguez", email: "carlos.rodriguez@example.com" },
-    { id: 4, name: "Ana Fernández", email: "ana.fernandez@example.com" }
+    { id: 1, name: "Juan Pérez", email: "juan.perez@example.com ", name2: "Ingles" },
+    { id: 2, name: "María Gómez", email: "maria.gomez@example.com",name2: "Español"  },
+    { id: 3, name: "Carlos Rodríguez", email: "carlos.rodriguez@example.com", name2: "Aleman"},
+    { id: 4, name: "Ana Fernández", email: "ana.fernandez@example.com",  name2: "Chino" }
 ];
 
 let DatosFiltrados=[]
@@ -34,6 +34,7 @@ function Mostrar_CampoTABLA() {
             <td>${element.id} </td>
             <td>${element.name}  </td>
             <td>${element.email} </td>
+             <td>${element.name2} </td>
          </tr>
         `
     });
